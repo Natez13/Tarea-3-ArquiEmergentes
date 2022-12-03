@@ -11,7 +11,9 @@ import Locations
 import Sensors
 import Sensors_data
 
-
+@app.route('/')
+def index():
+    return jsonify({"Tarea 3 Arqui Emergente"})
 
 #API's
 
