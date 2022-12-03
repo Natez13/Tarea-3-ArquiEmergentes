@@ -1,0 +1,698 @@
+{
+	"info": {
+		"_postman_id": "ff16ca7f-56d3-48bb-9615-f38bbf5c4225",
+		"name": "Tarea 3 AE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10821615"
+	},
+	"item": [
+		{
+			"name": "Location",
+			"item": [
+				{
+					"name": "All Location",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-tokens",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiU2ViYXN0aWFuR29uemFsZXM4In0.78Cm0DHaANj3-TNnbGGOFHUEGi_3FzAi8XJf8r5r0EI",
+								"type": "text"
+							},
+							{
+								"key": "company_api_key",
+								"value": "Wbs0Z4pu4fA92DJktKzfFM1Y25Itrcda",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/v1/location?company_id=1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"location"
+							],
+							"query": [
+								{
+									"key": "company_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Location",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-tokens",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiU2ViYXN0aWFuR29uemFsZXM4In0.78Cm0DHaANj3-TNnbGGOFHUEGi_3FzAi8XJf8r5r0EI",
+								"type": "text"
+							},
+							{
+								"key": "company_api_key",
+								"value": "Wbs0Z4pu4fA92DJktKzfFM1Y25Itrcda",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/v1/location/id/?location_id=1&company_id=1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"location",
+								"id",
+								""
+							],
+							"query": [
+								{
+									"key": "location_id",
+									"value": "1"
+								},
+								{
+									"key": "company_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Location Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-tokens",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiU2ViYXN0aWFuR29uemFsZXM4In0.78Cm0DHaANj3-TNnbGGOFHUEGi_3FzAi8XJf8r5r0EI",
+								"type": "text"
+							},
+							{
+								"key": "company_api_key",
+								"value": "Wbs0Z4pu4fA92DJktKzfFM1Y25Itrcda",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"location_id\": \"2\",\r\n\"location_name\": \"Plaza V\",\r\n\"location_country\": \"Chile\",\r\n\"location_city\": \"Santiago\",\r\n\"location_meta\": \"sd5as6as654das5da\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/location_update/id/",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"location_update",
+								"id",
+								""
+							],
+							"query": [
+								{
+									"key": "location_id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Location Insert",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-tokens",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiU2ViYXN0aWFuR29uemFsZXM4In0.78Cm0DHaANj3-TNnbGGOFHUEGi_3FzAi8XJf8r5r0EI",
+								"type": "text"
+							},
+							{
+								"key": "company_api_key",
+								"value": "Wbs0Z4pu4fA92DJktKzfFM1Y25Itrcda",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"company_id\": \"1\",\r\n\"location_name\": \"Plaza V\",\r\n\"location_country\": \"Chile\",\r\n\"location_city\": \"Santiago\",\r\n\"location_meta\": \"sd5as6as654das5da\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/location_insert",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"location_insert"
+							],
+							"query": [
+								{
+									"key": "location_id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Location Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-tokens",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiU2ViYXN0aWFuR29uemFsZXM4In0.78Cm0DHaANj3-TNnbGGOFHUEGi_3FzAi8XJf8r5r0EI",
+								"type": "text"
+							},
+							{
+								"key": "company_api_key",
+								"value": "Wbs0Z4pu4fA92DJktKzfFM1Y25Itrcda",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"location_id\": \"2\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/location_delete/id/",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"location_delete",
+								"id",
+								""
+							],
+							"query": [
+								{
+									"key": "location_id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sensor",
+			"item": [
+				{
+					"name": "All Sensor",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-tokens",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiU2ViYXN0aWFuR29uemFsZXM4In0.78Cm0DHaANj3-TNnbGGOFHUEGi_3FzAi8XJf8r5r0EI",
+								"type": "text"
+							},
+							{
+								"key": "company_api_key",
+								"value": "Wbs0Z4pu4fA92DJktKzfFM1Y25Itrcda",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/v1/sensor?company_id=1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"sensor"
+							],
+							"query": [
+								{
+									"key": "company_api_key",
+									"value": "Wbs0Z4pu4fA92DJktKzfFM1Y25Itrcda",
+									"disabled": true
+								},
+								{
+									"key": "company_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Sensor",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-tokens",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiU2ViYXN0aWFuR29uemFsZXM4In0.78Cm0DHaANj3-TNnbGGOFHUEGi_3FzAi8XJf8r5r0EI",
+								"type": "text"
+							},
+							{
+								"key": "company_api_key",
+								"value": "Wbs0Z4pu4fA92DJktKzfFM1Y25Itrcda",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/v1/sensor/id/?sensor_id=2&company_id=1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"sensor",
+								"id",
+								""
+							],
+							"query": [
+								{
+									"key": "sensor_id",
+									"value": "2"
+								},
+								{
+									"key": "company_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sensor Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-tokens",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiU2ViYXN0aWFuR29uemFsZXM4In0.78Cm0DHaANj3-TNnbGGOFHUEGi_3FzAi8XJf8r5r0EI",
+								"type": "text"
+							},
+							{
+								"key": "company_api_key",
+								"value": "Wbs0Z4pu4fA92DJktKzfFM1Y25Itrcda",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"sensor_id\":3,\r\n\"location_id\": 1,\r\n\"sensor_name\": \"Sensor T5\",\r\n\"sensor_category\": \"TEMPERATURE\",\r\n\"sensor_meta\": \"Sensor LM35DZ-I\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/sensor_update/id/",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"sensor_update",
+								"id",
+								""
+							],
+							"query": [
+								{
+									"key": "location_id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sensor Insert",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-tokens",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiU2ViYXN0aWFuR29uemFsZXM4In0.78Cm0DHaANj3-TNnbGGOFHUEGi_3FzAi8XJf8r5r0EI",
+								"type": "text"
+							},
+							{
+								"key": "company_api_key",
+								"value": "Wbs0Z4pu4fA92DJktKzfFM1Y25Itrcda",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"location_id\": \"1\",\r\n\"sensor_name\": \"Sensor T3\",\r\n\"sensor_category\": \"TEMPERATURE\",\r\n\"sensor_meta\": \"Sensor LM35DZ\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/sensor_insert",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"sensor_insert"
+							],
+							"query": [
+								{
+									"key": "location_id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sensor Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-tokens",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiU2ViYXN0aWFuR29uemFsZXM4In0.78Cm0DHaANj3-TNnbGGOFHUEGi_3FzAi8XJf8r5r0EI",
+								"type": "text"
+							},
+							{
+								"key": "company_api_key",
+								"value": "Wbs0Z4pu4fA92DJktKzfFM1Y25Itrcda",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"sensor_id\": \"5\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/sensor_delete/id/",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"sensor_delete",
+								"id",
+								""
+							],
+							"query": [
+								{
+									"key": "location_id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sensor_data",
+			"item": [
+				{
+					"name": "Add Sensor Data",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-tokens",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiU2ViYXN0aWFuR29uemFsZXM4In0.78Cm0DHaANj3-TNnbGGOFHUEGi_3FzAi8XJf8r5r0EI",
+								"type": "text"
+							},
+							{
+								"key": "sensor_api_key",
+								"value": "iiaSF52hpPZm8JFqa2R1epgf0RGgn1Hn",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"sensor_id\": 1,\r\n\"temperature\": \"37\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/sensor_data",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"sensor_data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Sensor_Data",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-tokens",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiU2ViYXN0aWFuR29uemFsZXM4In0.78Cm0DHaANj3-TNnbGGOFHUEGi_3FzAi8XJf8r5r0EI",
+								"type": "text"
+							},
+							{
+								"key": "sensor_api_key",
+								"value": "iiaSF52hpPZm8JFqa2R1epgf0RGgn1Hn",
+								"type": "text"
+							},
+							{
+								"key": "company_api_key",
+								"value": "Wbs0Z4pu4fA92DJktKzfFM1Y25Itrcda",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/v1/sensor_data?sensor_id=[2]&from=1670098680&to=1670098689&company_id=1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"sensor_data"
+							],
+							"query": [
+								{
+									"key": "company_api_key",
+									"value": "Wbs0Z4pu4fA92DJktKzfFM1Y25Itrcda",
+									"disabled": true
+								},
+								{
+									"key": "sensor_id",
+									"value": "[2]"
+								},
+								{
+									"key": "from",
+									"value": "1670098680"
+								},
+								{
+									"key": "to",
+									"value": "1670098689"
+								},
+								{
+									"key": "company_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "List User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-tokens",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiU2ViYXN0aWFuR29uemFsZXM4In0.78Cm0DHaANj3-TNnbGGOFHUEGi_3FzAi8XJf8r5r0EI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:5000/api/v1/user",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Company",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-tokens",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiU2ViYXN0aWFuIEdvbnphbGV6In0.Tj78zeouuKOHrRKk1155e4Yglanf-ev7RYXSgHjhYlA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/api/v1/company",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"company"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "SebastianGonzales8",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "mantequilla",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/api/v1/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
