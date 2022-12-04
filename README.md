@@ -1,4 +1,5 @@
 # Tarea de 3 Arquitectura Emergentes
+## Lucas Almonacid - Benjamin Fernandez
 
 Para correr el sistema realizar un:
 
